@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Reactjs app from facebook reactjs docs</title>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <!-- figure out core some other time -->
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <!--
+    <script src="node_modules/babel-core/lib/api/browser.js"></script>
+    -->
+</head>
+
+<body>
+<div id="static">
+    <h1>Reactjs app from facebook reactjs docs</h1>
+
+</div>
+
+<h2>Non-JSX component</h2>
+<div id="reactjsNonJSXApp"></div>
+
+<script type="text/javascript">
+  //import React from 'react';
+  //import ReactDOM from 'react-dom';
+  // pre es6 ... nothing
+
+  // simple - non-JSX script
+  var elem = React.createElement;
+
+  // reference to keep from having to type this all the time
+  ReactDOM.render(elem('div', null, 'Hello World'),
+  document.getElementById('reactjsNonJSXApp')
+  );
+
+</script>
+
+<h2>JSX component</h2>
+<div id="reactjsNonJSXApp"></div>
+
+<script type="text/babel">
+  // simple - JSX script & ES6 format
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+
+  ReactDOM.render(
+      <div>Hello World from JSX</div>,
+      document.getElementById('reactjsNonJSXApp')
+  );
+
+  
+
+
+</script>
+
+<h2>Bable standalone test</h2>
+<div id="babelApp"></div>
+
+<script type="text/babel">
+  const getMessage = () => "Hello Babel World";
+  document.getElementById('babelApp').innerHTML = getMessage();
+</script>
+
+<div id="fancierStuff">
+    <h1>Fancier Stuff</h1>
+    <p>TBD</p>
+</div>
+
+</body>
+
+</html>
