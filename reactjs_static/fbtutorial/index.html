@@ -6,9 +6,7 @@
     <script src="node_modules/react-dom/dist/react-dom.js"></script>
     <!-- figure out core some other time -->
     <script src="node_modules/babel-standalone/babel.js"></script>
-    <!--
-    <script src="node_modules/babel-core/lib/api/browser.js"></script>
-    -->
+    
 </head>
 
 <body>
@@ -35,21 +33,19 @@
 
 </script>
 
-<h2>JSX component</h2>
-<div id="reactjsNonJSXApp"></div>
+<h2>JSX component transpiled</h2>
+<div id="reactjsJSXApp"></div>
 
 <script type="text/babel">
-  // simple - JSX script & ES6 format
-  import React from 'react';
-  import ReactDOM from 'react-dom';
+  // simple - JSX script and ES6 format
+  //  didn't need these because of the non-JSX piece
+  //import React from 'react';
+  //import ReactDOM from 'react-dom';
 
   ReactDOM.render(
       <div>Hello World from JSX</div>,
-      document.getElementById('reactjsNonJSXApp')
+      document.getElementById('reactjsJSXApp')
   );
-
-  
-
 
 </script>
 
@@ -61,11 +57,17 @@
   document.getElementById('babelApp').innerHTML = getMessage();
 </script>
 
-<div id="fancierStuff">
-    <h1>Fancier Stuff</h1>
-    <p>TBD</p>
-</div>
+<h2>Component Test</h2>
+<div id="componentTest"></div>
+<p> with state</p>
+<!--<script type="text/babel" src=".\Timer\index.js"></script>-->
+<script type="text/babel">
+  import Timer from '.\Timer\index.js'
 
+  ReactDOM.render(
+    <Timer />,
+     document.getElementById('componentTest'));
+</script>
 </body>
 
 </html>
