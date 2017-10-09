@@ -2,11 +2,11 @@
 
 <head>
     <title>Reactjs app from facebook reactjs docs</title>
-    <script src="node_modules/react/dist/react.js"></script>
-    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="../node_modules/react/dist/react.js"></script>
+    <script src="../node_modules/react-dom/dist/react-dom.js"></script>
     <!-- figure out core some other time -->
-    <script src="node_modules/babel-standalone/babel.js"></script>
-    
+    <!--<script src="../node_modules/babel-standalone/babel.js"></script>-->
+    <!-- put all ECMA6 scripts in files -->
 </head>
 
 <body>
@@ -36,23 +36,19 @@
 <h2>JSX component transpiled</h2>
 <div id="reactjsJSXApp"></div>
 
-<script type="text/babel">
-  // simple - JSX script and ES6 format
-  //  didn't need these because of the non-JSX piece
-  //import React from 'react';
-  //import ReactDOM from 'react-dom';
-
-  ReactDOM.render(
-      <div>Hello World from JSX</div>,
-      document.getElementById('reactjsJSXApp')
-  );
-
+<!-- pattern for having to put all inline ECMA6 js and JSX in external files-->
+<!--  your stuff in a bable file wrapped in plain js calls -->
+<script type="text/javascript" src="index_inline.js"></script>
+<script type="text/javascript">
+  // your stuff referencing the plain js
+  renderHelloinJSX(document.getElementById('reactjsJSXApp'));
 </script>
 
 <h2>Bable standalone test</h2>
 <div id="babelApp"></div>
 
-<script type="text/babel">
+<script type="text/javascript">
+  // use the inline wrapper
   const getMessage = () => "Hello Babel World";
   document.getElementById('babelApp').innerHTML = getMessage();
 </script>
@@ -60,14 +56,10 @@
 <h2>Component Test</h2>
 <div id="componentTest"></div>
 <p> with state</p>
-<!--<script type="text/babel" src=".\Timer\index.js"></script>-->
 <script type="text/babel">
-  import Timer from '.\Timer\index.js'
-
-  ReactDOM.render(
-    <Timer />,
-     document.getElementById('componentTest'));
+  renderTimer(document.getElementById('componentTest'));
 </script>
+<h1>Next step - convert to a proper build/dev environment - http://blog.tamizhvendan.in/blog/2015/11/23/a-beginner-guide-to-setup-react-dot-js-environment-using-babel-6-and-webpack/</h1>
 </body>
 
 </html>
