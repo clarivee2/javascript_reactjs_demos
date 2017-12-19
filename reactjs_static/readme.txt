@@ -1,4 +1,13 @@
-static reactjs - ie - deploy to a standard web server
+This is a static reactjs project but doesn't work very well
+with component model due compatibility issues with commonJS/node module lookup 
+- ie - deploy to a standard web server
+
+uses requireJS which is supposed to be compatibile but isn't.
+  npm requirejs --save
+
+looking at using a dev/prod build model instead - webpack build
+
+  babel loader - npm babel-loader webpack --save
 
 NOTE - NPM used for package updates etc
 
@@ -26,20 +35,18 @@ create app with bootstrap for non-node : https://github.com/facebookincubator/cr
 -- best environment seems to be the create-react-app model with usage of react-scripts
 -- link to a great walkthrough - https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#folder-structure
 
-- change app to use page template model - index.htm / index.js
+--
+--  best is to change app to use page template model - index.htm / index.js
 - add an app.js for node
 - use the static folder pattern for assets
 -- then ... you can build for prod and deploy just the build and static folder
+npm install react-scripts --save
 npm run build
 -- for dev just npm start in root folder
 -- to test out statics - just publish to your favorite server in a virtual directory or app or
 npm install -g serve
 serve -s build
 
--- next step convert this project
-
-
-npm install react-scripts --save
 
 
 

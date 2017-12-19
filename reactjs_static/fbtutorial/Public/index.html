@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reactjs app from facebook reactjs docs</title>
+
+
+  <!--
+      <script src="../node_modules/react/dist/react.js"></script>
+    <script src="../node_modules/react-dom/dist/react-dom.js"></script>
+    -->
+
+  <!-- babel transpiler -->
+  <!--<script src="../node_modules/babel-standalone/babel.js"></script>-->
+  <!-- put all ECMA6 scripts in files -->
+  <!-- requireJS for support on node modules/require -->
+  <!--<script src="../node_modules/requirejs/require.js"></script>-->
+
+  <!-- systemJS for support on node modules/require -->
+  <!-- <script src="../node_modules/systemjs/dist/system.js"></script>-->
+  <!-- <script>
+    System.config(
+      {
+        baseURL: '/'
+    }
+    );
+  </script> -->
+  <!--<script src="../node_modules/babel-core/lib/api/browser.js"></script>-->
+</head>
+
+<body>
+  <div id="static">
+    <h1>Reactjs app from facebook reactjs docs</h1>
+
+  </div>
+
+  <h2>This is a page of the basic fb tutorial for reacjs</h2>
+  <p>inline non-node model</p>
+
+  <h2>JSX simple</h2>
+  <div id="reactjsJSXApp"></div>
+
+
+  <script type="text/babel">
+    // your stuff referencing the plain js
+
+  </script>
+
+  <h2>Bable standalone test</h2>
+  <div id="babelApp"></div>
+
+  <h2>Component Test - non-JSX</h2>
+  <div id="componentTest1"></div>
+
+  <h2>Component Test - Timer</h2>
+  <div id="componentTest2"></div>
+  <p> with state</p>
+
+  <h2>List Processing</h2>
+  <div id="listTest"></div>
+  <p> with state</p>
+
+  <h1>Dev step - converted to a proper build/dev environment </h1>
+  <p>using and the webpack demo and - http://blog.tamizhvendan.in/blog/2015/11/23/a-beginner-guide-to-setup-react-dot-js-environment-using-babel-6-and-webpack/</p>
+
+  <!-- pattern for having to put all inline ECMA6 js and JSX in external files-->
+  <!--  your stuff in a bable file wrapped in plain js calls -->
+  <script type="text/javascript" src="bundle.app_inline.js"></script>
+
+</body>
+
+</html>
