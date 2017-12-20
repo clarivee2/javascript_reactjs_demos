@@ -43,11 +43,11 @@ function renderJSXTranspiled(domElement) {
 /**************************
  * List Component
  */
-import Lister from './Lister/index.js';
+import NumberList from './NumberList/index.js';
 
-function renderList(domElement) {
+function renderList(domElement, numbers) {
     ReactDOM.render(
-        <Lister />,
+        <NumberList numbers={numbers} />,
          domElement);
 }
 
@@ -63,7 +63,8 @@ function renderAll() {
 
     renderTimer(document.getElementById('componentTest2'));
     
-    renderList(document.getElementById('listTest'));
+    const numbers = [1,2,3,4,5];
+    renderList(document.getElementById('listTest'), numbers);
 }
 
 renderAll();
