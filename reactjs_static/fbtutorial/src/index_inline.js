@@ -63,6 +63,27 @@ function renderFormTestInput(domElement) {
 }
 
 
+
+/**************************
+ * Form - Input text component
+ */
+import EssayForm from './EssayForm/index.js';
+
+function renderFormTestTextArea(domElement) {
+    ReactDOM.render(
+        <EssayForm />,
+         domElement);
+}
+
+import FlavorForm from './FlavorForm/index.js';
+
+function renderFormTestSelectTag(domElement) {
+    ReactDOM.render(
+        <FlavorForm />,
+         domElement);
+}
+
+
 //inline render function
 function renderAll() {
     renderHelloinJSX(document.getElementById('reactjsJSXApp'));
@@ -79,7 +100,9 @@ function renderAll() {
     renderList(document.getElementById('listTest'), numbers);
 
     // form tests
-    renderFormTestInput(document.getElementById('formTestInput'))
-}
+    renderFormTestInput(document.getElementById('formTestInput'));
+    renderFormTestTextArea(document.getElementById('formTestTextArea'));
+    renderFormTestSelectTag(document.getElementById('formTestSelectTag'));
+ }
 
 renderAll();
