@@ -51,7 +51,19 @@ function renderList(domElement, numbers) {
          domElement);
 }
 
-//TODO - inline render function here
+/**************************
+ * Form - Input text component
+ */
+import NameForm from './NameForm/index.js';
+
+function renderFormTestInput(domElement) {
+    ReactDOM.render(
+        <NameForm />,
+         domElement);
+}
+
+
+//inline render function
 function renderAll() {
     renderHelloinJSX(document.getElementById('reactjsJSXApp'));
 
@@ -65,6 +77,9 @@ function renderAll() {
     
     const numbers = [1,2,3,4,5];
     renderList(document.getElementById('listTest'), numbers);
+
+    // form tests
+    renderFormTestInput(document.getElementById('formTestInput'))
 }
 
 renderAll();

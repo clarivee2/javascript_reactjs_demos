@@ -34,7 +34,7 @@ class NumberList extends Component {
     <ul>
       {this.listItems}
     </ul>
-    );
+   );
   }
 };
 
