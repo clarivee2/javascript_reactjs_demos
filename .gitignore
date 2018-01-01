@@ -17,3 +17,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# vs / net ignores
+
+# folders
+**/bin/*
+**/obj/*
+**/v15/*
+
+# files
+*.msi
+
+
