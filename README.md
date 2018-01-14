@@ -13,4 +13,35 @@ Also overloading this to encapsulate API examples.
 ## API Examples/Tutorials
 - TodoApi - from walkthrough at https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api - only step 1 for now. 
 
+the API itself is done - just test it thru postman
+
+## Adding Swagger
+
+tutorial: https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio
+
+Summary:
+- add package Swashbuckle.AspNetCore
+- register service & UI in startup
+
+All seems OK but getting a 500 error on swaggerui link.
+
+Links - port may vary in dev:
+* [Swagger service JSON](http://localhost:61022/swagger/v1/swagger.json)
+* [Swagger UI](http://localhost:61022/swagger)
+
 That's it for now - I will definitely tidy this up over time.
+
+# List of what I want to eventually do
+
+- [x] fbtutorial through to forms
+- [ ] "createapp" full react app
+- [ ] web api 
+  - [x] working "todo" example
+  - [x] swagger ui - with 500 error pending
+  - [ ] permanent hosting in a non-IIS environment
+ - [ ] web api usage thru ReactJS
+ - [ ] end-to-end data flows (will probably create a new project for that)
+ - [ ] deployment pipelines
+ - [ ] api authentication
+ 
+  
