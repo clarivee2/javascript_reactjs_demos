@@ -40,6 +40,7 @@ class FlavorForm extends React.Component {
                 <input type="submit" value="Submit" />
             </form>
         );
+        alert("asdf");
     }
 }
 
