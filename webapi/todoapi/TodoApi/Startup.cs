@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
+using GraphQL;
 
 namespace TodoApi
 {
@@ -50,6 +51,14 @@ namespace TodoApi
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+
+            // Add GraphQL - simple db architecture model
+            // services.AddSingleton<TodoContext>(); - may not be required - todo data already done using EMF objects
+            services.AddSingleton<TodoQuery>();
+            services.AddSingleton<TodoMutation>();
+            services.AddSingleton<ISchema>(
+                s => new TodoSchema(new FuncDependencyResolver(type => (GraphType)s.GetService(type))));
+
         }
 
         /// <summary>
@@ -73,6 +82,16 @@ namespace TodoApi
             });
 
            app.UseMvc();
+
+            // add GraphQL middleware model
+            app.UseMiddleware<GraphQLMiddleware>(new GraphQLSettings
+            {
+                BuildUserContext = ctx => new GraphQLUserContext
+                {
+                    User = ctx.User
+                }
+            });
+
         }
     }
 }
