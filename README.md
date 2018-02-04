@@ -38,10 +38,31 @@ That's it for now - I will definitely tidy this up over time.
 - [ ] web api 
   - [x] working "todo" example
   - [x] swagger ui - with 500 error pending
+  - [ ] GraphQL enpoint
   - [ ] permanent hosting in a non-IIS environment
+- { } API Consumer MVC App
+  - [ ] Consume normal API
+  - [ ] Consume GraphQL endpoint
  - [ ] web api usage thru ReactJS
  - [ ] end-to-end data flows (will probably create a new project for that)
  - [ ] deployment pipelines
  - [ ] api authentication
  
-  
+# Web API - GraphQL endpoint.
+
+- based on the GraphQL .net example - see source at https://github.com/graphql-dotnet/graphql-dotnet
+- extends the Todo API code
+
+
+ 
+# API Consumer Web App
+
+TBD
+
+## Consume Normal API
+
+TBD
+
+## Consume GraphQL Endpoint
+
+TBD 
