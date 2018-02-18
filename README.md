@@ -52,6 +52,8 @@ That's it for now - I will definitely tidy this up over time.
 
 - based on the GraphQL .net example - see source at https://github.com/graphql-dotnet/graphql-dotnet
 - extends the Todo API code
+- using SDL instead of coding in the schema
+
 
 
  
