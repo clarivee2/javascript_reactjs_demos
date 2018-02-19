@@ -40,10 +40,17 @@ That's it for now - I will definitely tidy this up over time.
   - [x] swagger ui - with 500 error pending
   - [ ] GraphQL enpoint
   - [ ] permanent hosting in a non-IIS environment
+- [ ] nodejs API 
+  - [x] working example
+  - [ ] swagger ui 
+  - [ ] SSL security
+  - [ ] Authentication security
+  - [ ] GraphQL enpoint
 - { } API Consumer MVC App
   - [ ] Consume normal API
   - [ ] Consume GraphQL endpoint
  - [ ] web api usage thru ReactJS
+   - [ ] Redux etc
  - [ ] end-to-end data flows (will probably create a new project for that)
  - [ ] deployment pipelines
  - [ ] api authentication
