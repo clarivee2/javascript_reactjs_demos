@@ -9,6 +9,7 @@
   "author": "Christian Larivee from sample by https://www.tutorialspoint.com/nodejs",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "swagger-ui": "^3.10.0"
   }
 }
