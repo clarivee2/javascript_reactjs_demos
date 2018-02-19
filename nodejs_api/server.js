@@ -12,6 +12,13 @@ app.get('/listUsers', function (req, res) {
    });
 })
 
+app.get('/listUsers2', function (req, res) {
+    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+        console.log( data );
+        res.end( data );
+    });
+ })
+
 // ******************************************
 //   add a user
 // ******************************************
