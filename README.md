@@ -42,7 +42,8 @@ That's it for now - I will definitely tidy this up over time.
   - [ ] permanent hosting in a non-IIS environment
 - [ ] nodejs API 
   - [x] working example
-  - [ ] swagger ui 
+  - [X] swagger ui - done on the nodejs-server-gen project - working at converting the nodejs-api project (todo) to use full swaggerui server/client
+  - [ ] implement data modelling to app and service
   - [ ] SSL security
   - [ ] Authentication security
   - [ ] GraphQL enpoint
@@ -50,7 +51,8 @@ That's it for now - I will definitely tidy this up over time.
   - [ ] Consume normal API
   - [ ] Consume GraphQL endpoint
  - [ ] web api usage thru ReactJS
-   - [ ] Redux etc
+   - [ ] Redux 
+   - [ ] Flux
  - [ ] end-to-end data flows (will probably create a new project for that)
  - [ ] deployment pipelines
  - [ ] api authentication
@@ -75,3 +77,4 @@ TBD
 ## Consume GraphQL Endpoint
 
 TBD 
+
