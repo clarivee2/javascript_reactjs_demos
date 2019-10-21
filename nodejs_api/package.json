@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "swagger-ui": "^3.10.0"
+    "swagger-ui": "^3.23.11"
   }
 }
